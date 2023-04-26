@@ -61,7 +61,7 @@ merge_blast2go_gene_list <- function(blast2go_file, blast2go_columns, gene_list_
   }
   
   # Group the Blast2GO data frame by gene ID and concatenate the GO terms using "|"
-  blast2go_grouped <- tryCatch(aggregate(GO, by = list(Gene_ID = blast2go$Gene_ID), FUN = paste, collapse = "|"), error = function(e) {
+  blast2go_grouped <- tryCatch(aggregate(blast2go["GO"], by = list(Gene_ID = blast2go$Gene_ID), FUN = paste, collapse = "|"), error = function(e) {
     stop("Error grouping Blast2GO data frame: ", e$message)
   })
   
