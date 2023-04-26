@@ -2,8 +2,8 @@
 #'
 #' This function takes the output of a Blast2GO analysis and a gene list file,
 #' and merges them based on the gene ID. The resulting file will include the
-#' gene description, sequence length, E-value, hit name, hit description, and
-#' Gene Ontology (GO) terms for each gene.
+#' columns from gene_list as well as gene description andGene Ontology (GO) 
+#' terms for each gene from the blast2GO file.
 #'
 #' @param blast2go_file Path to the Blast2GO output file.
 #' @param blast2go_columns Column names of the Blast2GO file as a character vector.
