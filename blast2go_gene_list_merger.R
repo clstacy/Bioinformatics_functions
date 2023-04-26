@@ -32,7 +32,7 @@
 #'
 #' @seealso https://www.blast2go.com/
 #' @seealso https://en.wikipedia.org/wiki/Gene_ontology
-merge_blast2go_gene_list <- function(blast2go_file, blast2go_columns, gene_list_file, merged_file, remove_endings = FALSE) {
+merge_blast2go_gene_list <- function(blast2go_file, blast2go_columns, gene_list_file, merged_file, remove_endings = TRUE) {
   # Check if blast2go_columns is a character vector
   if (!is.character(blast2go_columns)) {
     stop("blast2go_columns must be a character vector.")
